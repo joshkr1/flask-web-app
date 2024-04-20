@@ -10,19 +10,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                dir('flask-web-app') {
+                dir('/home/centos/flask-web-app/') {
                     sh 'pip install -r requirements.txt'
                 }
             }
         }
 
-        stage('Run Flask Application') {
-            steps {
-                dir('flask-web-app') {
-                    sh 'python app.py'
-                }
-            }
-        }
+        // Additional stages...
     }
 }
 
